@@ -2,7 +2,7 @@ module.exports.config = {
   name: "leave",
   eventType: ["log:unsubscribe"],
   version: "1.0.0",
-  credits: "Mirai Team",
+  credits: "ARIF BABU",
   description: "left notification",
   dependencies: {
     "fs-extra": "",
@@ -20,15 +20,15 @@ module.exports.run = async function({ api, event, Users, Threads }) {
   const { threadID } = event;
   const data = global.data.threadData.get(parseInt(threadID)) || (await Threads.getData(threadID)).data;
   const name = global.data.userName.get(event.logMessageData.leftParticipantFbId) || await Users.getNameUser(event.logMessageData.leftParticipantFbId);
-  const type = (event.author == event.logMessageData.leftParticipantFbId) ? " " : "\n\nKicked by Administrator";
-  (typeof data.customLeave == "undefined") ? msg = "Goodbye {name} {type}" : msg = data.customLeave;
+  const type = (event.author == event.logMessageData.leftParticipantFbId) ? "खुद ही भाग गया 😐👈" : "एडमिन ने गुस्से में निकाल दिया 😐👈";
+  (typeof data.customLeave == "undefined") ? msg = "┏━━━━━┓\n     आरिफ-बाबू                    ✧═══•❁😎❁•═══✧\n┗━━━━━┛\n\n\nसुकर है इस ग्रुप में एक ठरकी कम हो गया 😀👈\nनाम  𒁍  {name}\nरीजन  𒁍 {type} 🤐✌️\n◆━◆━◆━◆━◆━◆━◆━◆━◆━◆━◆━◆━◆━◆\n\nबाय बाय ठरकी इंसान गुड {session}\n{time} ♥️♥️" : msg = data.customLeave;
   msg = msg.replace(/\{name}/g, name).replace(/\{type}/g, type);
 
   var link = [  
-"https://i.imgur.com/U2Uqx9J.jpg",
-"https://i.imgur.com/vtg9SY8.jpg",
-"https://i.imgur.com/FTM9eHt.jpg",
-"https://i.imgur.com/VGb89J8.jpg",
+"https://i.imgur.com/cClvBAQ.jpg",
+"https://i.imgur.com/cClvBAQ.jpg",
+"https://i.imgur.com/cClvBAQ.jpg",
+"https://i.imgur.com/cClvBAQ.jpg",
   ];
   var callback = () => api.sendMessage({ body: msg, attachment: fs.createReadStream(__dirname + "/cache/leiamnashO.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/leiamnashO.jpg"));
     return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname + "/cache/leiamnashO.jpg")).on("close", () => callback());
