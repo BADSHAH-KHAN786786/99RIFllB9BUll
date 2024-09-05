@@ -48,9 +48,6 @@ memLength.sort((a, b) => a - b);
                         .replace(/\{threadName}/g, threadName);                        
 
       var link = [
-"https://i.imgur.com/E49ptBn.jpg",
-"https://i.imgur.com/VaA0N6G.jpg",
-"https://i.imgur.com/pa2ZWhB.jpg",
 "https://i.postimg.cc/T20CvhtW/ezgif-2-c305128791.gif",
       ];
                                 var callback = () => api.sendMessage({ body: msg, attachment: fs.createReadStream(__dirname + "/cache/leiamnashJ.jpg"), mentions }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/leiamnashJ.jpg"));
