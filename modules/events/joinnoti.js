@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "joinNoti",
 	eventType: ["log:subscribe"],
 	version: "1.0.1",
-	credits: "ARIF BABU", //fixing ken gusler
+	credits: "ARIF BABU ", //fixing ken gusler
 	description: "Notify bot or group member with random gif/photo/video",
 	dependencies: {
 		"fs-extra": "",
@@ -65,7 +65,7 @@ module.exports.run = async function({ api, event }) {
 
 			if (existsSync(pathGif)) formPush = { body: msg, attachment: createReadStream(pathGif), mentions }
 			else if (randomPath.length != 0) {
-				const pathRandom = join(__dirname, "ARIF-BABU", "ARIF-1", `${randomPath[Math.floor(Math.random() * randomPath.length)]}`);
+				const pathRandom = join(__dirname, "ARIF-BABU", "ARIF-1",`${randomPath[Math.floor(Math.random() * randomPath.length)]}`);
 				formPush = { body: msg, attachment: createReadStream(pathRandom), mentions }
 			}
 			else formPush = { body: msg, mentions }
