@@ -40,7 +40,7 @@ module.exports.run = async function({ api, event, Users, Threads }) {
 
 	if (existsSync(path)) mkdirSync(path, { recursive: true });
 
-(typeof data.customLeave == "undefined") ? msg = "✧═══════•❁𝗚𝗢𝗢𝗗𝗕𝗬𝗘❁•═══════✧\n\nसुकर है एक ठरकी इस ग्रुप में कम हो गया 😃✌️\nउसका नाम है 𒁍 {name}\nरीजन 𒁍 {type}\n════════════════════════ ❁\nCREATER BY MR ARIF BABU ♥️" : msg = data.customLeave;
+(typeof data.customLeave == "undefined") ? msg = "✧════•❁𝗚𝗢𝗢𝗗𝗕𝗬𝗘❁•════✧\n\nसुकर है एक ठरकी इस ग्रुप में कम हो गया 😃✌️\nउसका नाम है 𒁍 {name}\nरीजन 𒁍 {type}\n════════════════════════ ❁\nCREATER BY MR ARIF BABU ♥️" : msg = data.customLeave;
 	msg = msg.replace(/\{name}/g, name).replace(/\{type}/g, type).replace(/\{session}/g, hours <= 10 ? "Suprabhat" : 
     hours > 10 && hours <= 12 ? "Good Afternoon" :
     hours > 12 && hours <= 18 ? "Good Evening" : "Good Night").replace(/\{time}/g, time);  
