@@ -105,7 +105,7 @@ module.exports.languages = {
     "on": "on",
     "off": "off",
     "successText": "success notification rankup!",
-    "levelup": "✧═══•❁•दिल की बात.❁•═══✧ {level}",
+    "levelup": "‎◦•●◉✿दिल की बात✿◉●•◦ {level}",
   }
 }
 module.exports.run = async function({ api, event, Threads, getText }) {
