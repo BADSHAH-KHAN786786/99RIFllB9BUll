@@ -1,8 +1,8 @@
 module.exports.config = {
- name: "info",
+ name: "inf2",
  version: "1.0.1", 
  hasPermssion: 0,
- credits: "𝐀𝐘𝐀𝐍",
+ credits: "ARIF BABU",
  description: "Admin and Bot info.",
  commandCategory: "...",
 	usePrefix: true,
@@ -29,25 +29,25 @@ var link =[
 ];
 var callback = () => api.sendMessage({body:` ♛|| Admin and Bot Info ||♛
 
-➠Bot Name: ${global.config.BOTNAME}
+𒁍BOT NAME ♥️🙂 𒁍 ${global.config.BOTNAME}
 
-➠Bot Admin: ${global.config.ADMINBOT}
+𒁍BOT ADMIN ♥️🙂 𒁍 ${global.config.ADMINBOT}
 
-➠Facebook: ${global.config.OWNERLINK}
+𒁍FACEBOOK ♥️🙂 𒁍 ${global.config.OWNERLINK}
 
-➠Bot Prefix: ${global.config.PREFIX}
+𒁍BOT PREFIX ♥️🙂 𒁍Prefix: ${global.config.PREFIX}
 
-➠status: ${global.config.STATUS}
+𒁍STATUS ♥️🙂 𒁍 ${global.config.STATUS}
 
-➠Owner name: ${global.config.BOTOWNER}
+𒁍OWNER NAME ♥️🙂 𒁍 ${global.config.BOTOWNER}
 
-➟UPTIME
+𒁍UPTIME ♥️🙂 𒁍
 
-➠Today is: ${juswa} 
+𒁍TODAY IS ♥️🙂 𒁍 ${juswa} 
 
-➠Bot is running ${hours}:${minutes}:${seconds}.
+𒁍BOT IS RUNNIN ♥️🙂 𒁍 ${hours}:${minutes}:${seconds}.
 
-➠Thanks for using ${global.config.BOTNAME}
+𒁍THANKS FOR USING ♥️🙂 𒁍 ${global.config.BOTNAME}
 `,attachment: fs.createReadStream(__dirname + "owner_photo.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "owner_photo.jpg")); 
 	 return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"owner_photo.jpg")).on("close",() => callback());
 	};
